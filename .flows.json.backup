@@ -1,0 +1,361 @@
+[
+    {
+        "id": "a196f2e693d0513d",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "cb216faf.d9136",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "iot.eclipse.org",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "da8ca300.2dfe6",
+        "type": "create dataset",
+        "z": "a196f2e693d0513d",
+        "name": "",
+        "path": "test/iris.data",
+        "saveFolder": "test/datasets",
+        "saveName": "iris",
+        "input": "0,1,2,3",
+        "output": "4",
+        "trainingPartition": "",
+        "shuffle": true,
+        "seed": "",
+        "x": 580,
+        "y": 140,
+        "wires": [
+            [
+                "4fb0a8dc.f6baf8"
+            ]
+        ]
+    },
+    {
+        "id": "44b6f4b0.34d7dc",
+        "type": "load dataset",
+        "z": "a196f2e693d0513d",
+        "name": "",
+        "datasetFolder": "test/datasets",
+        "datasetName": "iris",
+        "partition": "train.csv",
+        "input": true,
+        "output": true,
+        "x": 530,
+        "y": 260,
+        "wires": [
+            [
+                "26110acb.cbf526"
+            ],
+            [
+                "86385870.9f6b88"
+            ]
+        ]
+    },
+    {
+        "id": "4f7cc53d.87a22c",
+        "type": "inject",
+        "z": "a196f2e693d0513d",
+        "name": "start",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 350,
+        "y": 140,
+        "wires": [
+            [
+                "da8ca300.2dfe6"
+            ]
+        ]
+    },
+    {
+        "id": "d3e9e7ab.a06d68",
+        "type": "inject",
+        "z": "a196f2e693d0513d",
+        "name": "start",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 350,
+        "y": 260,
+        "wires": [
+            [
+                "44b6f4b0.34d7dc"
+            ]
+        ]
+    },
+    {
+        "id": "b21982e2.99cf1",
+        "type": "inject",
+        "z": "a196f2e693d0513d",
+        "name": "start",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 350,
+        "y": 500,
+        "wires": [
+            [
+                "f1b47338.aab82",
+                "1ea9f445.89d0bc"
+            ]
+        ]
+    },
+    {
+        "id": "4fb0a8dc.f6baf8",
+        "type": "debug",
+        "z": "a196f2e693d0513d",
+        "name": "print",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 810,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "86385870.9f6b88",
+        "type": "debug",
+        "z": "a196f2e693d0513d",
+        "name": "error",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 1010,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "2270c854.c34e08",
+        "type": "debug",
+        "z": "a196f2e693d0513d",
+        "name": "print",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 990,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "e69a3271.c7cab",
+        "type": "predictor",
+        "z": "a196f2e693d0513d",
+        "name": "decision tree classifier predictor",
+        "modelPath": "test/models",
+        "modelName": "dtc.b",
+        "x": 790,
+        "y": 480,
+        "wires": [
+            [
+                "b8f2ab19.e693a8"
+            ],
+            [
+                "f7c59de2.be773"
+            ]
+        ]
+    },
+    {
+        "id": "26110acb.cbf526",
+        "type": "decision tree classifier",
+        "z": "a196f2e693d0513d",
+        "name": "decision tree classifier trainer",
+        "savePath": "test/models",
+        "saveName": "dtc.b",
+        "maxDepth": "",
+        "criterion": "gini",
+        "splitter": "best",
+        "x": 780,
+        "y": 260,
+        "wires": [
+            [
+                "2270c854.c34e08"
+            ],
+            [
+                "86385870.9f6b88"
+            ]
+        ]
+    },
+    {
+        "id": "b8f2ab19.e693a8",
+        "type": "assessment",
+        "z": "a196f2e693d0513d",
+        "name": "",
+        "score": "accuracy_score",
+        "x": 830,
+        "y": 420,
+        "wires": [
+            [
+                "808a0c93.8ee38"
+            ],
+            [
+                "f7c59de2.be773"
+            ]
+        ]
+    },
+    {
+        "id": "f1b47338.aab82",
+        "type": "load dataset",
+        "z": "a196f2e693d0513d",
+        "name": "",
+        "datasetFolder": "test/datasets",
+        "datasetName": "iris",
+        "partition": "test.csv",
+        "input": false,
+        "output": true,
+        "x": 530,
+        "y": 420,
+        "wires": [
+            [
+                "b8f2ab19.e693a8"
+            ],
+            [
+                "f7c59de2.be773"
+            ]
+        ]
+    },
+    {
+        "id": "1ea9f445.89d0bc",
+        "type": "load dataset",
+        "z": "a196f2e693d0513d",
+        "name": "",
+        "datasetFolder": "test/datasets",
+        "datasetName": "iris",
+        "partition": "test.csv",
+        "input": true,
+        "output": false,
+        "x": 530,
+        "y": 540,
+        "wires": [
+            [
+                "e69a3271.c7cab"
+            ],
+            [
+                "f7c59de2.be773"
+            ]
+        ]
+    },
+    {
+        "id": "f7c59de2.be773",
+        "type": "debug",
+        "z": "a196f2e693d0513d",
+        "name": "error",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 1030,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "808a0c93.8ee38",
+        "type": "debug",
+        "z": "a196f2e693d0513d",
+        "name": "print",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 1030,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "8a4ea95c.f860b8",
+        "type": "predictor",
+        "z": "a196f2e693d0513d",
+        "name": "decision tree classifier predictor",
+        "modelPath": "test/models",
+        "modelName": "dtc.b",
+        "x": 690,
+        "y": 640,
+        "wires": [
+            [
+                "e967043f.480868"
+            ],
+            [
+                "e66df10b.40ba8"
+            ]
+        ]
+    },
+    {
+        "id": "e967043f.480868",
+        "type": "mqtt out",
+        "z": "a196f2e693d0513d",
+        "name": "",
+        "topic": "predictions",
+        "qos": "",
+        "retain": "",
+        "broker": "cb216faf.d9136",
+        "x": 970,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "e66df10b.40ba8",
+        "type": "debug",
+        "z": "a196f2e693d0513d",
+        "name": "error",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 950,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "3cd1a442.2bc73c",
+        "type": "mqtt in",
+        "z": "a196f2e693d0513d",
+        "name": "",
+        "topic": "classification",
+        "qos": "2",
+        "broker": "cb216faf.d9136",
+        "inputs": 0,
+        "x": 380,
+        "y": 640,
+        "wires": [
+            [
+                "8a4ea95c.f860b8"
+            ]
+        ]
+    }
+]
