@@ -24,5 +24,82 @@
         "willTopic": "",
         "willQos": "0",
         "willPayload": ""
+    },
+    {
+        "id": "9696417f83351e66",
+        "type": "image",
+        "z": "a196f2e693d0513d",
+        "name": "",
+        "width": 160,
+        "data": "annotatedInput",
+        "dataType": "msg",
+        "thumbnail": false,
+        "active": true,
+        "pass": false,
+        "outputs": 0,
+        "x": 200,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "b94b6c74daa931fd",
+        "type": "fileinject",
+        "z": "a196f2e693d0513d",
+        "name": "",
+        "x": 160,
+        "y": 140,
+        "wires": [
+            [
+                "475f50c1970beef7",
+                "9696417f83351e66"
+            ]
+        ]
+    },
+    {
+        "id": "475f50c1970beef7",
+        "type": "cocossd",
+        "z": "a196f2e693d0513d",
+        "name": "",
+        "x": 360,
+        "y": 140,
+        "wires": [
+            [
+                "0d1937e3d4d11d96",
+                "508c8c4543321bb9"
+            ]
+        ]
+    },
+    {
+        "id": "0d1937e3d4d11d96",
+        "type": "image",
+        "z": "a196f2e693d0513d",
+        "name": "",
+        "width": 160,
+        "data": "annotatedInput",
+        "dataType": "msg",
+        "thumbnail": false,
+        "active": true,
+        "pass": false,
+        "outputs": 0,
+        "x": 600,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "508c8c4543321bb9",
+        "type": "debug",
+        "z": "a196f2e693d0513d",
+        "name": "msg",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 140,
+        "wires": []
     }
 ]

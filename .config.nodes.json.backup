@@ -763,5 +763,68 @@
                 "file": "/home/pi/.node-red/node_modules/node-red-contrib-machine-learning-v2/nodes/trainers/one-class-support-vector-classifier/one-class-support-vector-classifier.js"
             }
         }
+    },
+    "node-red-contrib-tensorflow": {
+        "name": "node-red-contrib-tensorflow",
+        "version": "0.2.2",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "node": {
+                "name": "node",
+                "types": [
+                    "cocossd",
+                    "handpose",
+                    "mobilenet",
+                    "posenet"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-tensorflow",
+                "file": "/home/pi/.node-red/node_modules/node-red-contrib-tensorflow/tensorflow.js"
+            }
+        }
+    },
+    "node-red-contrib-browser-utils": {
+        "name": "node-red-contrib-browser-utils",
+        "version": "0.0.10",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "fileinject": {
+                "name": "fileinject",
+                "types": [
+                    "fileinject"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-browser-utils",
+                "file": "/home/pi/.node-red/node_modules/node-red-contrib-browser-utils/fileinject/fileinject.js"
+            },
+            "microphone": {
+                "name": "microphone",
+                "types": [
+                    "microphone"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-browser-utils",
+                "file": "/home/pi/.node-red/node_modules/node-red-contrib-browser-utils/microphone/microphone.js"
+            },
+            "camera": {
+                "name": "camera",
+                "types": [
+                    "camera"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-browser-utils",
+                "file": "/home/pi/.node-red/node_modules/node-red-contrib-browser-utils/camera/camera.js"
+            }
+        }
     }
 }
