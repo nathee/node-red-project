@@ -459,7 +459,7 @@
     },
     "node-red-node-ping": {
         "name": "node-red-node-ping",
-        "version": "0.3.1",
+        "version": "0.3.3",
         "local": true,
         "user": true,
         "nodes": {
@@ -478,7 +478,7 @@
     },
     "node-red-node-random": {
         "name": "node-red-node-random",
-        "version": "0.4.0",
+        "version": "0.4.1",
         "local": true,
         "user": true,
         "nodes": {
@@ -1063,6 +1063,268 @@
                 "user": false,
                 "module": "node-red-dashboard",
                 "file": "/home/pi/.node-red/node_modules/node-red-dashboard/nodes/ui_spacer.js"
+            }
+        }
+    },
+    "node-red-contrib-buffer-parser": {
+        "name": "node-red-contrib-buffer-parser",
+        "version": "3.2.2",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "buffer-parser": {
+                "name": "buffer-parser",
+                "types": [
+                    "buffer-parser"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-buffer-parser",
+                "file": "/home/pi/.node-red/node_modules/node-red-contrib-buffer-parser/buffer-parser.js"
+            },
+            "buffer-maker": {
+                "name": "buffer-maker",
+                "types": [
+                    "buffer-maker"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-buffer-parser",
+                "file": "/home/pi/.node-red/node_modules/node-red-contrib-buffer-parser/buffer-maker.js"
+            }
+        }
+    },
+    "node-red-contrib-ibm-watson-iot": {
+        "name": "node-red-contrib-ibm-watson-iot",
+        "version": "0.2.8",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "wiotp": {
+                "name": "wiotp",
+                "types": [
+                    "wiotp-credentials",
+                    "wiotp in",
+                    "wiotp out"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-ibm-watson-iot",
+                "file": "/home/pi/.node-red/node_modules/node-red-contrib-ibm-watson-iot/application/wiotp.js"
+            }
+        }
+    },
+    "node-red-contrib-dht-sensor": {
+        "name": "node-red-contrib-dht-sensor",
+        "version": "1.0.4",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "rpi-dht22": {
+                "name": "rpi-dht22",
+                "types": [
+                    "rpi-dht22"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-dht-sensor",
+                "file": "/home/pi/.node-red/node_modules/node-red-contrib-dht-sensor/dht22-node/dht22-node.js"
+            }
+        }
+    },
+    "node-red-contrib-sensor-ds18b20": {
+        "name": "node-red-contrib-sensor-ds18b20",
+        "version": "0.2.0",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "sensor-ds18b20": {
+                "name": "sensor-ds18b20",
+                "types": [
+                    "sensor-ds18b20"
+                ],
+                "enabled": false,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-sensor-ds18b20",
+                "file": "/home/pi/.node-red/node_modules/node-red-contrib-sensor-ds18b20/sensor.js"
+            }
+        }
+    },
+    "node-red-contrib-ds18b20-sensor": {
+        "name": "node-red-contrib-ds18b20-sensor",
+        "version": "1.3.6",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "rpi-ds18b20": {
+                "name": "rpi-ds18b20",
+                "types": [
+                    "rpi-ds18b20"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-ds18b20-sensor",
+                "file": "/home/pi/.node-red/node_modules/node-red-contrib-ds18b20-sensor/ds18b20-node/ds18b20-node.js"
+            }
+        }
+    },
+    "node-red-contrib-sds011-dust-sensor": {
+        "name": "node-red-contrib-sds011-dust-sensor",
+        "version": "1.0.2",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "SDS011": {
+                "name": "SDS011",
+                "types": [
+                    "SDS011"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-sds011-dust-sensor",
+                "file": "/home/pi/.node-red/node_modules/node-red-contrib-sds011-dust-sensor/sds011-node/sds011-node.js"
+            }
+        }
+    },
+    "node-red-contrib-sensor-htu21d": {
+        "name": "node-red-contrib-sensor-htu21d",
+        "version": "1.0.1",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "htu21d": {
+                "name": "htu21d",
+                "types": [
+                    "sensor-htu21d"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-sensor-htu21d",
+                "file": "/home/pi/.node-red/node_modules/node-red-contrib-sensor-htu21d/sensor-htu21d.js"
+            }
+        }
+    },
+    "node-red-contrib-ui-multistate-switch": {
+        "name": "node-red-contrib-ui-multistate-switch",
+        "version": "1.2.3",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "ui_mult_state_switch": {
+                "name": "ui_mult_state_switch",
+                "types": [
+                    "ui_multistate_switch"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-ui-multistate-switch",
+                "file": "/home/pi/.node-red/node_modules/node-red-contrib-ui-multistate-switch/multistate_switch.js"
+            }
+        }
+    },
+    "node-red-node-sqlite": {
+        "name": "node-red-node-sqlite",
+        "version": "1.0.3",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "sqlite": {
+                "name": "sqlite",
+                "types": [
+                    "sqlitedb",
+                    "sqlite"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-node-sqlite",
+                "file": "/home/pi/.node-red/node_modules/node-red-node-sqlite/sqlite.js"
+            }
+        }
+    },
+    "node-red-node-mysql": {
+        "name": "node-red-node-mysql",
+        "version": "1.0.3",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "mysql": {
+                "name": "mysql",
+                "types": [
+                    "MySQLdatabase",
+                    "mysql"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-node-mysql",
+                "file": "/home/pi/.node-red/node_modules/node-red-node-mysql/68-mysql.js"
+            }
+        }
+    },
+    "sqlite-plugin-red": {
+        "name": "sqlite-plugin-red",
+        "version": "0.0.3",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "sqlite-plugin-red": {
+                "name": "sqlite-plugin-red",
+                "types": [
+                    "sqlite-plugin-red"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "sqlite-plugin-red",
+                "file": "/home/pi/.node-red/node_modules/sqlite-plugin-red/sqlite-plugin-red.js"
+            }
+        }
+    },
+    "node-red-node-pi-mcp3008": {
+        "name": "node-red-node-pi-mcp3008",
+        "version": "0.5.2",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "pimcp3008": {
+                "name": "pimcp3008",
+                "types": [
+                    "pimcp3008"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-node-pi-mcp3008",
+                "file": "/home/pi/.node-red/node_modules/node-red-node-pi-mcp3008/pimcp3008.js"
+            }
+        }
+    },
+    "node-red-contrib-ui-led": {
+        "name": "node-red-contrib-ui-led",
+        "version": "0.4.11",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "ui_led": {
+                "name": "ui_led",
+                "types": [
+                    "ui_led"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-ui-led",
+                "file": "/home/pi/.node-red/node_modules/node-red-contrib-ui-led/dist/nodes/ui_led/ui_led.js"
             }
         }
     }

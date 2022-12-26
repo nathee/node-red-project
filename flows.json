@@ -1,6 +1,14 @@
 [
     {
-        "id": "a196f2e693d0513d",
+        "id": "a342d987bd7e8c06",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "727dc9a96c5971a3",
         "type": "tab",
         "label": "Flow 2",
         "disabled": false,
@@ -8,88 +16,420 @@
         "env": []
     },
     {
-        "id": "cb216faf.d9136",
-        "type": "mqtt-broker",
-        "name": "",
-        "broker": "iot.eclipse.org",
-        "port": "1883",
-        "clientid": "",
-        "usetls": false,
-        "compatmode": true,
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": ""
+        "id": "2256554c7341b5c4",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
     },
     {
-        "id": "9696417f83351e66",
-        "type": "image",
-        "z": "a196f2e693d0513d",
+        "id": "5bc4fcf5.332164",
+        "type": "subflow",
+        "name": "Subflow 1",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "2c29ca9d.1f3726"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 920,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "26fe58d.da0d2a8",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 540,
+                "y": 120,
+                "wires": [
+                    {
+                        "id": "c3cccc67.eba87",
+                        "port": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "bc09249168d821ac",
+        "type": "ui_group",
+        "name": "Patient",
+        "tab": "7dcc246f.ee661c",
+        "order": 1,
+        "disp": false,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7dcc246f.ee661c",
+        "type": "ui_tab",
+        "name": "TEST",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "8b8a781085d62d31",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "775506223fdad408",
+        "type": "sqlitedb",
+        "db": "SYSTEMS",
+        "mode": "RWC"
+    },
+    {
+        "id": "c55d32a2.85a79",
+        "type": "ui_group",
+        "name": "Orginal",
+        "tab": "",
+        "order": 9,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "8af25296.497b5",
+        "type": "ui_group",
+        "name": "ค่าที่ตั้งไว้",
+        "tab": "7dcc246f.ee661c",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d98fe46534fcf332",
+        "type": "ui_group",
+        "name": "อุณหภูมิ",
+        "tab": "7dcc246f.ee661c",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4e5b05598235e3f4",
+        "type": "ui_group",
+        "name": "ความชื้น",
+        "tab": "7dcc246f.ee661c",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2c29ca9d.1f3726",
+        "type": "function",
+        "z": "5bc4fcf5.332164",
         "name": "",
-        "width": 160,
-        "data": "annotatedInput",
-        "dataType": "msg",
-        "thumbnail": false,
-        "active": true,
-        "pass": false,
-        "outputs": 0,
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
         "x": 200,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "b94b6c74daa931fd",
-        "type": "fileinject",
-        "z": "a196f2e693d0513d",
-        "name": "",
-        "x": 160,
-        "y": 140,
+        "y": 80,
         "wires": [
             [
-                "475f50c1970beef7",
-                "9696417f83351e66"
+                "c3cccc67.eba87",
+                "dc32c467.fb1168"
             ]
         ]
     },
     {
-        "id": "475f50c1970beef7",
-        "type": "cocossd",
-        "z": "a196f2e693d0513d",
-        "name": "",
-        "x": 360,
-        "y": 140,
+        "id": "dc32c467.fb1168",
+        "type": "switch",
+        "z": "5bc4fcf5.332164",
+        "name": "allow only 1 ",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 390,
+        "y": 80,
         "wires": [
             [
-                "0d1937e3d4d11d96",
-                "508c8c4543321bb9"
+                "90e7351e.a17e68"
+            ],
+            [
+                "54e68c10.45d2f4"
             ]
         ]
     },
     {
-        "id": "0d1937e3d4d11d96",
-        "type": "image",
-        "z": "a196f2e693d0513d",
+        "id": "c3cccc67.eba87",
+        "type": "trigger",
+        "z": "5bc4fcf5.332164",
         "name": "",
-        "width": 160,
-        "data": "annotatedInput",
-        "dataType": "msg",
-        "thumbnail": false,
-        "active": true,
-        "pass": false,
-        "outputs": 0,
-        "x": 600,
-        "y": 220,
-        "wires": []
+        "op1": "",
+        "op2": "Kapı 30 saniyedir açık!!",
+        "op1type": "nul",
+        "op2type": "str",
+        "duration": "30",
+        "extend": false,
+        "units": "s",
+        "reset": "1",
+        "bytopic": "all",
+        "outputs": 1,
+        "x": 390,
+        "y": 120,
+        "wires": [
+            []
+        ]
     },
     {
-        "id": "508c8c4543321bb9",
+        "id": "90e7351e.a17e68",
+        "type": "change",
+        "z": "5bc4fcf5.332164",
+        "name": "High",
+        "rules": [
+            {
+                "t": "set",
+                "p": "bc",
+                "pt": "msg",
+                "to": "orange",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "status",
+                "pt": "msg",
+                "to": "High",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 80,
+        "wires": [
+            [
+                "26fe58d.da0d2a8"
+            ]
+        ]
+    },
+    {
+        "id": "54e68c10.45d2f4",
+        "type": "change",
+        "z": "5bc4fcf5.332164",
+        "name": "Low",
+        "rules": [
+            {
+                "t": "set",
+                "p": "bc",
+                "pt": "msg",
+                "to": "purple",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "status",
+                "pt": "msg",
+                "to": "Low",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 120,
+        "wires": [
+            [
+                "26fe58d.da0d2a8"
+            ]
+        ]
+    },
+    {
+        "id": "26fe58d.da0d2a8",
+        "type": "function",
+        "z": "5bc4fcf5.332164",
+        "name": "",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 780,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7de272a446332dc9",
+        "type": "inject",
+        "z": "a342d987bd7e8c06",
+        "name": "Create_DATABASE_LOG",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "CREATE TABLE LOG( TIMESTAMP INT PRIMARY KEY NOT NULL, FNAME VARCHAR NOT NULL, AGE INT NOT NULL)",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 20,
+        "wires": [
+            [
+                "4a728c5e6abe4da8"
+            ]
+        ]
+    },
+    {
+        "id": "4a728c5e6abe4da8",
+        "type": "sqlite",
+        "z": "a342d987bd7e8c06",
+        "mydb": "775506223fdad408",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "DATABASE",
+        "x": 430,
+        "y": 40,
+        "wires": [
+            [
+                "f84697e7a9fbb14b"
+            ]
+        ]
+    },
+    {
+        "id": "f84697e7a9fbb14b",
         "type": "debug",
-        "z": "a196f2e693d0513d",
-        "name": "msg",
+        "z": "a342d987bd7e8c06",
+        "name": "msg.payload",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -98,8 +438,816 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 690,
-        "y": 140,
+        "x": 630,
+        "y": 40,
         "wires": []
+    },
+    {
+        "id": "c2a977c5529e186a",
+        "type": "inject",
+        "z": "a342d987bd7e8c06",
+        "name": "CREATE_SETTING",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "CREATE TABLE SETTING(ID INT PRIMARY KEY NOT NULL,TEMP01 INT,TEMP02 INT,TEMP03 INT,FLOW01 INT,FLOW02 INT,FLOW03 INT,SOIL01 INT,SOIL02 INT,SOIL03 INT)",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 60,
+        "wires": [
+            [
+                "4a728c5e6abe4da8"
+            ]
+        ]
+    },
+    {
+        "id": "9b701032fe4128d2",
+        "type": "inject",
+        "z": "a342d987bd7e8c06",
+        "name": "INIT_SETTING",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "INSERT INTO SETTING (ID,TEMP01,TEMP02,TEMP03,FLOW01,FLOW02,FLOW03,SOIL01,SOIL02,SOIL03) VALUES (1,999,999,999,999,999,999,999,999,999)",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 100,
+        "wires": [
+            [
+                "4a728c5e6abe4da8"
+            ]
+        ]
+    },
+    {
+        "id": "6fa4fabcc005ce6e",
+        "type": "inject",
+        "z": "a342d987bd7e8c06",
+        "name": "SELECT_SETTING",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "SELECT * FROM SETTING",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 140,
+        "wires": [
+            [
+                "4a728c5e6abe4da8"
+            ]
+        ]
+    },
+    {
+        "id": "fed360338d911896",
+        "type": "ui_form",
+        "z": "727dc9a96c5971a3",
+        "name": "",
+        "label": "ตั้งค่าระบบ",
+        "group": "bc09249168d821ac",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "อุณหภูมิ 01",
+                "value": "tEMP01",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "อัตราการไหลของน้ำ 01",
+                "value": "fLOW01",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "ความชื้นในดิน 01",
+                "value": "sOIL01",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "อุณหภูมิ 02",
+                "value": "tEMP02",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "อัตราการไหลของน้ำ 02",
+                "value": "fLOW02",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "ความชื้นในดิน 02",
+                "value": "sOIL02",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "อุณหภูมิ 03",
+                "value": "tEMP03",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "อัตราการไหลของน้ำ 03",
+                "value": "fLOW03",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "ความชื้นในดิน 03",
+                "value": "sOIL03",
+                "type": "number",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "tEMP01": "",
+            "fLOW01": "",
+            "sOIL01": "",
+            "tEMP02": "",
+            "fLOW02": "",
+            "sOIL02": "",
+            "tEMP03": "",
+            "fLOW03": "",
+            "sOIL03": ""
+        },
+        "payload": "",
+        "submit": "บันทึก",
+        "cancel": "ยกเลิก",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": false,
+        "className": "",
+        "x": 160,
+        "y": 160,
+        "wires": [
+            [
+                "edb5702acc173a2a",
+                "579ed140bcc6b909"
+            ]
+        ]
+    },
+    {
+        "id": "579ed140bcc6b909",
+        "type": "function",
+        "z": "727dc9a96c5971a3",
+        "name": "function 45",
+        "func": "msg.topic = `UPDATE SETTING SET TEMP01 = $tEMP01,TEMP02 = $tEMP02,TEMP03 = $tEMP03,FLOW01 = $fLOW01,FLOW02 = $fLOW02,FLOW03 = $fLOW03,SOIL01 = $sOIL01,SOIL02 = $sOIL02,SOIL03 = $sOIL03 WHERE ID = $id`\nmsg.payload.id = 1;\nglobal.set(\"TEMP01\", msg.payload.tEMP01);\nglobal.set(\"TEMP02\", msg.payload.tEMP02);\nglobal.set(\"TEMP03\", msg.payload.tEMP03);\nmsg.payload = [msg.payload.tEMP01, msg.payload.tEMP02, msg.payload.tEMP03, msg.payload.fLOW01, msg.payload.fLOW02, msg.payload.fLOW03, msg.payload.sOIL01, msg.payload.sOIL02, msg.payload.sOIL03, msg.payload.id]\nreturn msg;\n// return msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 160,
+        "wires": [
+            [
+                "eaf7ee9e40c1b269"
+            ]
+        ]
+    },
+    {
+        "id": "edb5702acc173a2a",
+        "type": "debug",
+        "z": "727dc9a96c5971a3",
+        "name": "debug 90",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 300,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "eaf7ee9e40c1b269",
+        "type": "sqlite",
+        "z": "727dc9a96c5971a3",
+        "mydb": "775506223fdad408",
+        "sqlquery": "msg.topic",
+        "sql": "INSERT INTO (name, age) VALUES  ('{{paylaod.name}}', {{payload.age}})",
+        "name": "",
+        "x": 460,
+        "y": 160,
+        "wires": [
+            [
+                "26f30d260efd3350",
+                "f92b032c33545f04"
+            ]
+        ]
+    },
+    {
+        "id": "26f30d260efd3350",
+        "type": "debug",
+        "z": "727dc9a96c5971a3",
+        "name": "debug 91",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "f92b032c33545f04",
+        "type": "sqlite",
+        "z": "727dc9a96c5971a3",
+        "mydb": "775506223fdad408",
+        "sqlquery": "fixed",
+        "sql": "SELECT * FROM SETTING",
+        "name": "",
+        "x": 410,
+        "y": 280,
+        "wires": [
+            [
+                "3bcce437a2dd86f2"
+            ]
+        ]
+    },
+    {
+        "id": "800a0870e1523341",
+        "type": "ui_led",
+        "z": "727dc9a96c5971a3",
+        "order": 1,
+        "group": "bc09249168d821ac",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 770,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "3bcce437a2dd86f2",
+        "type": "function",
+        "z": "727dc9a96c5971a3",
+        "name": "function 46",
+        "func": "msg.payload = msg.payload[0].TEMP01;\nmsg.payload = msg.payload[0].TEMP02;\nmsg.payload = msg.payload[0].TEMP03;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 320,
+        "wires": [
+            [
+                "6ed3a5e2f36aeaa5",
+                "d2d73f42f38d75e4",
+                "7ec570859f5fe982"
+            ]
+        ]
+    },
+    {
+        "id": "6ed3a5e2f36aeaa5",
+        "type": "ui_text",
+        "z": "727dc9a96c5971a3",
+        "group": "8af25296.497b5",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "อุณหภูมิ 01",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 770,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "d2d73f42f38d75e4",
+        "type": "debug",
+        "z": "727dc9a96c5971a3",
+        "name": "debug 92",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "7ec570859f5fe982",
+        "type": "function",
+        "z": "727dc9a96c5971a3",
+        "name": "function 47",
+        "func": "var TEMP01 = global.get(\"TEMP01\");\nif (msg.payload >=TEMP01 ) {\n    msg.payload = true;\n} else {\n    msg.payload = false;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 360,
+        "wires": [
+            [
+                "800a0870e1523341"
+            ]
+        ]
+    },
+    {
+        "id": "db4f966713278c86",
+        "type": "inject",
+        "z": "2256554c7341b5c4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 240,
+        "wires": [
+            [
+                "8b2aee055335b804",
+                "7c412e6456539ba7"
+            ]
+        ]
+    },
+    {
+        "id": "8b2aee055335b804",
+        "type": "rpi-dht22",
+        "z": "2256554c7341b5c4",
+        "name": "",
+        "topic": "rpi-dht22",
+        "dht": 22,
+        "pintype": "0",
+        "pin": "25",
+        "x": 360,
+        "y": 240,
+        "wires": [
+            [
+                "a066dd02a0cbaff4",
+                "bed29dd1fbc8a4bf"
+            ]
+        ]
+    },
+    {
+        "id": "a066dd02a0cbaff4",
+        "type": "function",
+        "z": "2256554c7341b5c4",
+        "name": "function 49",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 220,
+        "wires": [
+            [
+                "f8d6711cc3401de2",
+                "9fa50c5dc07414ed"
+            ]
+        ]
+    },
+    {
+        "id": "bed29dd1fbc8a4bf",
+        "type": "function",
+        "z": "2256554c7341b5c4",
+        "name": "function 50",
+        "func": "msg.payload = msg.humidity;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 260,
+        "wires": [
+            [
+                "2c08767e6e647a53",
+                "7c9f26f83fb2b52a"
+            ]
+        ]
+    },
+    {
+        "id": "9fa50c5dc07414ed",
+        "type": "ui_gauge",
+        "z": "2256554c7341b5c4",
+        "name": "",
+        "group": "d98fe46534fcf332",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 730,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "f8d6711cc3401de2",
+        "type": "ui_chart",
+        "z": "2256554c7341b5c4",
+        "name": "",
+        "group": "d98fe46534fcf332",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "50",
+        "removeOlder": "10",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 730,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7c9f26f83fb2b52a",
+        "type": "ui_gauge",
+        "z": "2256554c7341b5c4",
+        "name": "",
+        "group": "4e5b05598235e3f4",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 730,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "2c08767e6e647a53",
+        "type": "ui_chart",
+        "z": "2256554c7341b5c4",
+        "name": "",
+        "group": "4e5b05598235e3f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "10",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 730,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7c412e6456539ba7",
+        "type": "rpi-dht22",
+        "z": "2256554c7341b5c4",
+        "name": "",
+        "topic": "rpi-dht22",
+        "dht": 22,
+        "pintype": "0",
+        "pin": "24",
+        "x": 360,
+        "y": 400,
+        "wires": [
+            [
+                "5689c183555a0d4a",
+                "54248ef76ab397b8"
+            ]
+        ]
+    },
+    {
+        "id": "5689c183555a0d4a",
+        "type": "function",
+        "z": "2256554c7341b5c4",
+        "name": "function 51",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 380,
+        "wires": [
+            [
+                "cbdeab112dad730b",
+                "9a42742286a48f98"
+            ]
+        ]
+    },
+    {
+        "id": "54248ef76ab397b8",
+        "type": "function",
+        "z": "2256554c7341b5c4",
+        "name": "function 52",
+        "func": "msg.payload = msg.humidity;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 420,
+        "wires": [
+            [
+                "1571ecf367631a47",
+                "563a576017601ac8"
+            ]
+        ]
+    },
+    {
+        "id": "cbdeab112dad730b",
+        "type": "ui_gauge",
+        "z": "2256554c7341b5c4",
+        "name": "",
+        "group": "d98fe46534fcf332",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 730,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "9a42742286a48f98",
+        "type": "ui_chart",
+        "z": "2256554c7341b5c4",
+        "name": "",
+        "group": "d98fe46534fcf332",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "50",
+        "removeOlder": "10",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 730,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1571ecf367631a47",
+        "type": "ui_gauge",
+        "z": "2256554c7341b5c4",
+        "name": "",
+        "group": "4e5b05598235e3f4",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 730,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "563a576017601ac8",
+        "type": "ui_chart",
+        "z": "2256554c7341b5c4",
+        "name": "",
+        "group": "4e5b05598235e3f4",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "10",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 730,
+        "y": 460,
+        "wires": [
+            []
+        ]
     }
 ]
